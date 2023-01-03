@@ -90,7 +90,7 @@ namespace WorkoutBGWebApp
             acceptButton = driver.FindElement(By.CssSelector(".btn"));
             acceptButton.Click();
 
-            Thread.Sleep(3000);
+           driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             userProfileLink = driver.FindElement(By.CssSelector(".top-menu-item > .dropdown-toggle > .links-text"));
             userProfileLink.Click();
 
